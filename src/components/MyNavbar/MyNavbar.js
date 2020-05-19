@@ -21,7 +21,7 @@ class MyNavbar extends React.Component {
     return (
       <div className="MyNavbar">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">React Pinterest</a>
+          <h1 className="navbar-brand">React Pinterest</h1>
 
           <div className="navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
