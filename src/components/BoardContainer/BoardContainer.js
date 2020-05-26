@@ -6,6 +6,7 @@ import authData from '../../helpers/data/authData';
 import smash from '../../helpers/data/smash';
 
 import Board from '../Board/Board';
+import BoardForm from '../BoardForm/BoardForm';
 
 import './BoardContainer.scss';
 
@@ -16,6 +17,7 @@ class BoardContainer extends React.Component {
 
   state = {
     boards: [],
+    formOpen: false,
   }
 
   getAllBoards = () => {
@@ -35,7 +37,7 @@ class BoardContainer extends React.Component {
   }
 
   render() {
-    const { boards } = this.state;
+    const { boards, formOpen } = this.state;
     const { setSingleBoard } = this.props;
 
     const makeBoards = boards.map((board) => <Board key={board.id} board={board} setSingleBoard={setSingleBoard} removeBoard={this.removeBoard}/>);
@@ -43,6 +45,8 @@ class BoardContainer extends React.Component {
     return (
       <div className="BoardContainer">
         <h2>Boards</h2>
+        <button className="btn btn-dark" onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus"></i></button>
+        { formOpen ? <BoardForm /> : ''}
         <div className="d-flex flex-wrap">
           {makeBoards}
         </div>
