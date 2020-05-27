@@ -40,7 +40,7 @@ class BoardForm extends React.Component {
       <div className="BoardForm m-3">
         <form className="col-6 offset-3 bg-light p-3">
            <div className="form-group">
-            <label htmlFor="board-name">Email address</label>
+            <label htmlFor="board-name">Board Name</label>
             <input
             type="text"
             className="form-control"
@@ -50,7 +50,7 @@ class BoardForm extends React.Component {
             onChange={this.nameChange}/>
           </div>
            <div className="form-group">
-            <label htmlFor="board-description">Password</label>
+            <label htmlFor="board-description">Board Description</label>
             <input
             type="text"
             className="form-control"
